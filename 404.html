@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReviewTap</title>
+<script>
+const routes = {
+  "0001": "https://www.google.com/",
+  "0002": "https://www.google.com/",
+  "0003": "https://www.google.com/"
+};
+const parts = location.pathname.split("/").filter(Boolean);
+const id = parts.length >= 2 && parts[0] === "r" ? parts[1] : "";
+const target = routes[id];
+if (target) location.replace(target);
+</script>
+</head>
+<body>
+<h2>ReviewTap</h2>
+<p>Kartu tidak ditemukan.</p>
+</body>
+</html>
